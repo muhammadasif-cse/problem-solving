@@ -5,5 +5,8 @@
         "markdown": false,
         "scminput": false,
         "c": false
+    },
+    "files.associations": {
+        "stdio.h": "c"
     }
 }
