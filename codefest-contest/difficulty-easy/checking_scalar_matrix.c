@@ -1,3 +1,4 @@
+//! Take input a matrix and check if it’s a scalar matrix or not.
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -16,6 +17,22 @@ int main()
         }
     }
 
+    //* check is matrix
+    bool is_matrix = true;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i != j)
+            {
+                if (arr[i][j] != 0)
+                {
+                    is_matrix = false;
+                }
+            }
+        }
+    }
+
     //* scaler matrix
     int temp_matrix = 0;
     int next_matrix = 1;
@@ -25,7 +42,7 @@ int main()
     {
         for (int j = 0; j < n; j++)
         {
-            //* check is matrix
+            //* check is scalar matrix
             if (i == j)
             {
                 temp_matrix = arr[i][j];
@@ -41,8 +58,8 @@ int main()
         next_matrix++;
     }
 
-    //* print matrix
-    if (is_scalar_matrix)
+    //* print is scaler matrix
+    if (is_matrix && is_scalar_matrix)
     {
         printf("Scalar Matrix");
     }
