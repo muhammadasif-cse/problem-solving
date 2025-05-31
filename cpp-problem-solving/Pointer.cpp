@@ -4,11 +4,13 @@ using namespace std;
 int main()
 {
     int a, b;
-    cin >> a;
-    cin.ignore();
-    cin >> b;
 
-    cout << (a + b) << endl
-         << abs(a - b) << endl;
+    int *pa = &a, *pb = &b;
+
+    cin >> *pa >> *pb;
+
+    cout << (*pa + *pb) << endl
+         << abs(*pa - *pb) << endl;
+         
     return 0;
 }
