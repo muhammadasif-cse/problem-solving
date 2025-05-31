@@ -4,7 +4,10 @@
         "plaintext": false,
         "markdown": false,
         "scminput": false,
-        "c": false
+        "c": false,
+        "typescriptreact": true,
+        "cpp": true,
+        "typescript": true
     },
     "files.associations": {
         "stdio.h": "c"
